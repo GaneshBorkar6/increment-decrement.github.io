@@ -1,0 +1,48 @@
+<!-- 
+Project: Increment Decrement Action
+Developed By: Ganesh Borkar
+Languages Used: HTML, CSS, JavaScript
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incr-Decr</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h3 class="head">Increment - Decrement</h3>
+        <h3 id="display">0</h3>
+        <div class="buttons">
+            <button class="btn" onclick="decr()">-</button>
+            <button class="btn" onclick="reset()" id="reset">RESET</button>
+            <button class="btn" onclick="incr()">+</button>
+        </div>
+    </div>
+    
+    <script>
+        var count = 0;
+        var display = document.getElementById('display'); 
+
+        function incr() {
+            count += 1;
+            display.innerHTML = count;    
+        }
+
+        function decr() {
+            count -= 1;
+            display.innerHTML = count;
+        }
+
+        function reset() { 
+            count = 0;
+            display.innerHTML = count;
+        }
+    </script>
+</body>
+</html>
